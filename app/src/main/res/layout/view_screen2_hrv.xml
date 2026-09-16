@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF6FF"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- HRV Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💙  HRV — Heart rate variability"
+            android:textColor="#0F172A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView android:id="@+id/tvRmssd" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#E2E8F0" android:padding="10dp" android:gravity="center" android:text="RMSSD: 46 ms" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <TextView android:id="@+id/tvSdnn" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#E2E8F0" android:padding="10dp" android:gravity="center" android:text="SDNN: 77 ms" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <TextView android:id="@+id/tvMeanRr" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#E2E8F0" android:padding="10dp" android:gravity="center" android:text="Mean RR interval: 583 ms" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <TextView android:id="@+id/tvAvgHr" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#E2E8F0" android:padding="10dp" android:gravity="center" android:text="Average heart rate: 103 bpm" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <TextView android:id="@+id/tvPnn50" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#E2E8F0" android:padding="10dp" android:gravity="center" android:text="PNN50: 3 %" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <TextView android:id="@+id/tvLnRmssd" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#E2E8F0" android:padding="10dp" android:gravity="center" android:text="ln(RMSSD): 3.83 ms" android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Respiratory Rate Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💨  Respiratory rate:"
+            android:textColor="#0F172A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvAvgResp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0F2FE"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="Average respiratory rate:14.29"
+            android:textColor="#0369A1"
+            android:textStyle="bold" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/respChart"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

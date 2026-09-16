@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Red Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B91C1C"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="≡  Polar H10 ECG Analysis"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⋮"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0F2FE"
+            android:padding="10dp"
+            android:text="Data processed                                             א"
+            android:textColor="#0369A1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DCFCE7"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="WITHIN LIMITS"
+            android:textColor="#166534"
+            android:textStyle="bold" />
+
+        <!-- Parameters List -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="meanHR" android:textColor="#334155" />
+            <TextView android:id="@+id/tvMeanHR" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="52 [35-180] bpm" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="pNN50" android:textColor="#334155" />
+            <TextView android:id="@+id/tvPNN50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11 [0-45] %" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="pNN200" android:textColor="#334155" />
+            <TextView android:id="@+id/tvPNN200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 [0-15] %" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="meanQRS" android:textColor="#334155" />
+            <TextView android:id="@+id/tvMeanQRS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="85 [50-114] ms" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="meanQTc" android:textColor="#334155" />
+            <TextView android:id="@+id/tvMeanQTc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="384 [310-470] ms" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="meanTPositive" android:textColor="#334155" />
+            <TextView android:id="@+id/tvMeanTPositive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="99 [90-100] %" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="meanJPoint" android:textColor="#334155" />
+            <TextView android:id="@+id/tvMeanJPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="75 [0-500] uV" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="mean2-8Hz" android:textColor="#334155" />
+            <TextView android:id="@+id/tvMean28Hz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="65 [0-90] %" android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0F2FE"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="Signal sample"
+            android:textColor="#0369A1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0F2FE"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="Sample Event (1/6)"
+            android:textColor="#0369A1"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -19,7 +19,7 @@
         android:icon="@android:drawable/ic_menu_compass"
         android:label="Polar H10 ECG Recorder"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/Theme.PolarRecorder">
         
         <activity
             android:name=".MainActivity"

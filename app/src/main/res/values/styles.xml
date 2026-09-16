@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PolarRecorder" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#1B2027</item>
+        <item name="colorPrimaryDark">#0F1318</item>
+        <item name="colorAccent">#39FF8F</item>
+    </style>
+</resources>

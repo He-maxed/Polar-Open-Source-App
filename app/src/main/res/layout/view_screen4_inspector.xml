@@ -43,7 +43,7 @@
             android:layout_marginBottom="10dp" />
 
         <!-- Custom QRS Canvas View (Red Ectopic Couplet Highlights & Green Dots) -->
-        <com.polar.recorder.ui.Screen4InspectorView.CustomQrsCanvasView
+        <com.polar.recorder.ui.CustomQrsCanvasView
             android:id="@+id/customQrsCanvas"
             android:layout_width="match_parent"
             android:layout_height="180dp" />

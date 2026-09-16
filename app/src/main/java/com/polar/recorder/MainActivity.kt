@@ -49,12 +49,17 @@ class MainActivity : AppCompatActivity() {
         btnConnectBle = findViewById(R.id.btnConnectBle)
         btnRecord = findViewById(R.id.btnRecord)
 
-        screen1View = Screen1ResultsView(this)
-        screen2View = Screen2HrvView(this)
-        screen3View = Screen3ActivityView(this)
-        screen4View = Screen4InspectorView(this)
+        try {
+            screen1View = Screen1ResultsView(this)
+            screen2View = Screen2HrvView(this)
+            screen3View = Screen3ActivityView(this)
+            screen4View = Screen4InspectorView(this)
 
-        showView(screen1View)
+            showView(screen1View)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "UI Init note: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
+        }
 
         findViewById<Button>(R.id.tab1Btn).setOnClickListener { showView(screen1View) }
         findViewById<Button>(R.id.tab2Btn).setOnClickListener { showView(screen2View) }
@@ -62,29 +67,44 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.tab4Btn).setOnClickListener { showView(screen4View) }
 
         btnConnectBle.setOnClickListener {
-            val bluetoothManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
-            val adapter = bluetoothManager.adapter
-            if (adapter != null && adapter.isEnabled) {
-                val pairedDevices = adapter.bondedDevices
-                val polarDevice = pairedDevices.firstOrNull { it.name?.contains("Polar H10") == true }
-                if (polarDevice != null) {
-                    bleManager.connectDevice(polarDevice)
+            try {
+                val bluetoothManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
+                val adapter = bluetoothManager.adapter
+                if (adapter != null && adapter.isEnabled) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
+                        ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                        checkPermissions()
+                        return@setOnClickListener
+                    }
+                    val pairedDevices = adapter.bondedDevices
+                    val polarDevice = pairedDevices?.firstOrNull { it.name?.contains("Polar H10") == true }
+                    if (polarDevice != null) {
+                        bleManager.connectDevice(polarDevice)
+                    } else {
+                        Toast.makeText(this, "Polar H10 not found in paired Bluetooth devices. Please pair it in settings.", Toast.LENGTH_LONG).show()
+                    }
                 } else {
-                    Toast.makeText(this, "Polar H10 not paired in Bluetooth settings.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Please enable Bluetooth.", Toast.LENGTH_SHORT).show()
                 }
-            } else {
-                Toast.makeText(this, "Please enable Bluetooth.", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this, "Bluetooth note: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
             }
         }
 
         btnRecord.setOnClickListener {
-            if (bleManager.isRecording) {
-                bleManager.stopRecording()
-                btnRecord.text = "⏺ Record"
-            } else {
-                val path = bleManager.startRecording()
-                btnRecord.text = "⏹ Stop & Save"
-                Toast.makeText(this, "Recording started to $path", Toast.LENGTH_LONG).show()
+            try {
+                if (bleManager.isRecording) {
+                    bleManager.stopRecording()
+                    btnRecord.text = "⏺ Record"
+                } else {
+                    val path = bleManager.startRecording()
+                    btnRecord.text = "⏹ Stop & Save"
+                    Toast.makeText(this, "Recording saved to $path", Toast.LENGTH_LONG).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this, "Storage note: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -103,9 +123,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateAllViews() {
-        screen1View.updateResults(currentAnalysisResult)
-        screen2View.updateResults(currentAnalysisResult)
-        screen3View.updateResults(currentAnalysisResult)
+        try {
+            screen1View.updateResults(currentAnalysisResult)
+            screen2View.updateResults(currentAnalysisResult)
+            screen3View.updateResults(currentAnalysisResult)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private fun checkPermissions() {

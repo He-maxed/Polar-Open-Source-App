@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFF6FF">
+    android:background="#0F1318">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,9 +18,9 @@
             android:gravity="center_vertical"
             android:padding="8dp">
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="←" android:textSize="20sp" />
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="📅 2026-04-14 à 10:24:33 · 01 h 18 min 22 sec" android:textColor="#64748B" android:textSize="12sp" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textSize="20sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="←" android:textColor="#D9DEE3" android:textSize="20sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="📅 2026-04-14 à 10:24:33 · 01 h 18 min 22 sec" android:textColor="#7C8794" android:textSize="12sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textColor="#D9DEE3" android:textSize="20sp" />
         </LinearLayout>
 
         <!-- Inspector Event Title -->
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="VEB - Couplet (12/19)"
-            android:textColor="#0F172A"
+            android:textColor="#39FF8F"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="2026-04-14 10:24:33"
-            android:textColor="#64748B"
+            android:textColor="#7C8794"
             android:textSize="12sp"
             android:layout_marginBottom="10dp" />
 
@@ -52,8 +52,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFF7ED"
-            android:textColor="#C2410C"
+            android:background="#1B2027"
+            android:textColor="#FFB347"
             android:padding="10dp"
             android:gravity="center"
             android:text="≡  VEB - Couplet"
@@ -68,13 +68,13 @@
             android:orientation="horizontal"
             android:layout_marginBottom="12dp">
 
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#FFFFFF" android:padding="12dp" android:gravity="center" android:text="🔍\nLocate Extrasystoles" android:textColor="#0284C7" android:textStyle="bold" />
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#FFFFFF" android:padding="12dp" android:gravity="center" android:layout_marginStart="6dp" android:text="≡\nMultiples" android:textColor="#C2410C" android:textStyle="bold" />
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#FFFFFF" android:padding="12dp" android:gravity="center" android:layout_marginStart="6dp" android:text="📈\nECG signal" android:textColor="#0284C7" android:textStyle="bold" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#1B2027" android:padding="12dp" android:gravity="center" android:text="🔍\nLocate Extrasystoles" android:textColor="#6BB3FF" android:textStyle="bold" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#1B2027" android:padding="12dp" android:gravity="center" android:layout_marginStart="6dp" android:text="≡\nMultiples" android:textColor="#FFB347" android:textStyle="bold" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#1B2027" android:padding="12dp" android:gravity="center" android:layout_marginStart="6dp" android:text="📈\nECG signal" android:textColor="#39FF8F" android:textStyle="bold" />
         </LinearLayout>
 
         <!-- Amplitude Buttons -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AMPLITUDE" android:textColor="#64748B" android:textStyle="bold" android:textSize="11sp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AMPLITUDE" android:textColor="#7C8794" android:textStyle="bold" android:textSize="11sp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp" android:layout_marginBottom="10dp">
             <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="✕" />
             <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="^" />
@@ -82,7 +82,7 @@
         </LinearLayout>
 
         <!-- Temporal Navigation -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TEMPORAL NAVIGATION" android:textColor="#64748B" android:textStyle="bold" android:textSize="11sp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TEMPORAL NAVIGATION" android:textColor="#7C8794" android:textStyle="bold" android:textSize="11sp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
             <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🔍" />
             <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🔎" />

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFF6FF"
+    android:background="#0F1318"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="#1B2027"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🚶  Physical activity"
-            android:textColor="#0F172A"
+            android:textColor="#D9DEE3"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="12dp" />
@@ -29,22 +29,21 @@
             android:orientation="horizontal"
             android:layout_marginBottom="12dp">
 
-            <TextView android:id="@+id/tvSteps" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#E0F2FE" android:padding="8dp" android:gravity="center" android:text="🏃 6833 steps" android:textColor="#0284C7" android:textStyle="bold" />
-            <TextView android:id="@+id/tvDistance" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#E0F2FE" android:padding="8dp" android:gravity="center" android:layout_marginStart="6dp" android:text="📏 5169 m" android:textColor="#0284C7" android:textStyle="bold" />
-            <TextView android:id="@+id/tvSpeed" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#E0F2FE" android:padding="8dp" android:gravity="center" android:layout_marginStart="6dp" android:text="⚡ 3.89 km/h" android:textColor="#0284C7" android:textStyle="bold" />
+            <TextView android:id="@+id/tvSteps" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#22282F" android:padding="8dp" android:gravity="center" android:text="🏃 6833 steps" android:textColor="#0284C7" android:textStyle="bold" />
+            <TextView android:id="@+id/tvDistance" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#22282F" android:padding="8dp" android:gravity="center" android:layout_marginStart="6dp" android:text="📏 5169 m" android:textColor="#0284C7" android:textStyle="bold" />
+            <TextView android:id="@+id/tvSpeed" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="#22282F" android:padding="8dp" android:gravity="center" android:layout_marginStart="6dp" android:text="⚡ 3.89 km/h" android:textColor="#0284C7" android:textStyle="bold" />
         </LinearLayout>
 
-        <View
+        <com.polar.recorder.ui.CustomActivityGraphView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="#F1F5F9" />
+            android:layout_height="180dp" />
     </LinearLayout>
 
     <!-- Heart Zones Card -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="#1B2027"
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_marginTop="16dp">
@@ -53,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="📊  Heart zones"
-            android:textColor="#0F172A"
+            android:textColor="#D9DEE3"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -61,18 +60,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Distribution of extrasystoles by zone:"
-            android:textColor="#64748B"
+            android:textColor="#7C8794"
             android:textSize="12sp"
             android:layout_marginBottom="12dp" />
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Recovery" android:textStyle="bold" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="32 / 68" android:textStyle="bold" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="#D9DEE3" android:text="Recovery" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#D9DEE3" android:text="32 / 68" android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rest" android:textStyle="bold" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="68 / 32" android:textStyle="bold" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="#D9DEE3" android:text="Rest" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#D9DEE3" android:text="68 / 32" android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

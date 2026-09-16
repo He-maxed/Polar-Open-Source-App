@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Polar H10 ECG Recorder"
+            android:text="Polar H10 ECG Workbench"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Source: Sim"
+            android:textColor="#39FF8F"
             android:textSize="10sp" />
 
         <Button
@@ -44,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="⏺ Record"
+            android:textColor="#FF5D5D"
             android:textSize="10sp" />
 
         <Button

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#1B2027</color>
-    <color name="colorPrimaryDark">#0F1318</color>
-    <color name="colorAccent">#39FF8F</color>
+    <color name="bg_dark">#0F1318</color>
+    <color name="panel_bg">#14181D</color>
+    <color name="panel_card">#1B2027</color>
+    <color name="panel_border">#2C333C</color>
+    <color name="text_primary">#D9DEE3</color>
+    <color name="text_secondary">#7C8794</color>
+    <color name="phosphor_green">#39FF8F</color>
+    <color name="phosphor_dim">#1F7D4C</color>
+    <color name="amber_warning">#FFB347</color>
+    <color name="danger_red">#FF5D5D</color>
+    <color name="info_blue">#6BB3FF</color>
+    <color name="accent_blue">#0284C7</color>
 </resources>

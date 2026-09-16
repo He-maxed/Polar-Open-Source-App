@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polar H10 Device Reference & Clinical Guide</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0f1318;
+      color: #d9dee3;
+      margin: 0;
+      padding: 18px;
+      line-height: 1.6;
+    }
+    h1 { font-family: sans-serif; color: #39ff8f; font-size: 20px; border-bottom: 1px solid #2c333c; padding-bottom: 8px; margin-top: 0; }
+    h2 { color: #ffb347; font-size: 15px; margin-top: 20px; }
+    .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; background: #22282f; color: #39ff8f; border: 1px solid #1f7d4c; }
+    .card { background: #14181d; border: 1px solid #2c333c; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+    .disclaimer { background: rgba(255, 179, 71, 0.1); border: 1px solid rgba(255, 179, 71, 0.4); color: #ffb347; padding: 12px; border-radius: 6px; font-size: 12px; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+    th, td { padding: 8px; border-bottom: 1px solid #2c333c; text-align: left; }
+    th { color: #7c8794; text-transform: uppercase; font-size: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>Polar H10 Chest Strap — Reference Guide</h1>
+
+  <div class="disclaimer">
+    <strong>Clinical Decision-Support Notice:</strong> This application is intended solely for research review, physical fitness tracking, and clinician decision-support. It is not a certified diagnostic medical device and does not replace a standard 12-lead ECG or professional medical evaluation.
+  </div>
+
+  <div class="card">
+    <h2>1. Data Streams & Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Stream</th><th>Sample Rate</th><th>Resolution / Range</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>ECG</strong> (Single-lead)</td><td>130 Hz</td><td>14-bit (µV values)</td></tr>
+        <tr><td><strong>RR Intervals</strong></td><td>1024 Hz (tick)</td><td>ms inter-beat timing</td></tr>
+        <tr><td><strong>Heart Rate (HR)</strong></td><td>1 Hz</td><td>BPM (standard BLE Profile)</td></tr>
+        <tr><td><strong>ACC</strong> (3-Axis)</td><td>200 Hz</td><td>±2g / ±4g / ±8g range</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>2. Electrode Placement & Signal Quality Tips</h2>
+    <ul>
+      <li><strong>Moisten Electrodes:</strong> Lightly wet the rubber electrode areas on the reverse of the Pro Strap with water before snapping the sensor module in.</li>
+      <li><strong>Strap Tightness:</strong> Adjust the strap so it sits snugly just below the chest muscles (sternum level) without causing discomfort.</li>
+      <li><strong>Artifact Reduction:</strong> Accelerometer (ACC) data is continuously cross-referenced to score motion artifacts. Excessive body movement may introduce baseline wander.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>3. Glossary of Terms</h2>
+    <p><span class="badge">PVC</span> <strong>Premature Ventricular Contraction:</strong> Early ectopic beat originating in the ventricles with wide QRS complex (>120ms) and compensatory pause.</p>
+    <p><span class="badge">PAC</span> <strong>Premature Atrial Contraction:</strong> Early ectopic beat originating in the atria with normal narrow QRS width and incomplete pause.</p>
+    <p><span class="badge">AFib</span> <strong>Atrial Fibrillation:</strong> Irregularly irregular RR interval pattern with absent discrete P-waves.</p>
+    <p><span class="badge">SDNN</span> Standard deviation of all normal-to-normal RR intervals across the recording (overall HRV).</p>
+    <p><span class="badge">RMSSD</span> Root mean square of successive RR interval differences (parasympathetic/vagal activity).</p>
+    <p><span class="badge">pNN50</span> Percentage of successive RR intervals that differ by more than 50 ms.</p>
+  </div>
+
+</body>
+</html>

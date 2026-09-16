@@ -11,31 +11,56 @@
         android:layout_height="wrap_content"
         android:background="#1B2027"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:gravity="center_vertical"
+        android:padding="10dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Polar H10 Android Recorder"
+            android:text="Polar H10 ECG Recorder"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSourceToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Source: Sim"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/btnConnectBle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⚡ Connect BLE"
-            android:textSize="11sp" />
+            android:layout_marginStart="4dp"
+            android:text="⚡ Stream"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/btnRecord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="4dp"
             android:text="⏺ Record"
-            android:textSize="11sp" />
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnPdfExport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="📄 PDF"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="ℹ️ Info"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <!-- Tab Buttons Container -->
